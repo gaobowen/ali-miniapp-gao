@@ -5,7 +5,7 @@ Component({
     y: 0,
     stayStyle: { opacity: 1 },
     moveStyle: { opacity: 1 },
-    showMove: true
+    moveOpacity: 0.3
   },
   props: {},
   didMount() {
@@ -14,8 +14,8 @@ Component({
         ...this.props.styleObj,
         width: this.props.width,
         height: this.props.height,
-        showMove : this.props.showMove === false ? false : true
-      }
+      },
+      moveOpacity : this.props.showMove == "false" ? 0 : 0.3
     })
   },
   didUpdate() { },
@@ -26,7 +26,7 @@ Component({
       this.data.y = e.detail.pageY;
       let start = {
         ...this.data.moveStyle,
-        opacity: this.data.showMove ? 0.3 : 0,
+        opacity: this.data.moveOpacity,
         zIndex: 999999,
         transform: 'translate(10px, 10px)'
       };
