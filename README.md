@@ -38,7 +38,7 @@ Page({
 });
 
 ```
-![](./draggable/doc/draggable.png)
-![](./draggable/doc/draggable2.png)
+![](draggable/doc/draggable.png)
+![](draggable/doc/draggable2.png)
 
 
