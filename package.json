@@ -1,0 +1,24 @@
+{
+  "name": "ali-miniapp-gao",
+  "version": "1.0.0",
+  "description": "alibaba mini-app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gaobowen/ali-miniapp-gao.git"
+  },
+  "keywords": [
+    "ali",
+    "miniapp",
+    "draggable"
+  ],
+  "author": "gaobowen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gaobowen/ali-miniapp-gao/issues"
+  },
+  "homepage": "https://github.com/gaobowen/ali-miniapp-gao#readme"
+}

@@ -1,0 +1,15 @@
+#root1890f52960c0407a94a33a327d77448d{
+    position: relative;
+}
+
+#root1890f52960c0407a94a33a327d77448d .stay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#root1890f52960c0407a94a33a327d77448d .move{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}

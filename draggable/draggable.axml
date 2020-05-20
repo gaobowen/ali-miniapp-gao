@@ -1,0 +1,23 @@
+<view
+  id="root1890f52960c0407a94a33a327d77448d"
+  style={{styleObj}}
+  catchLongTap=""
+  catchTouchMove=""
+  catchTouchEnd=""
+>
+  <view
+    class="stay"
+    style={{stayStyle}}
+  >
+    <slot />
+  </view>
+  <view
+    class="move"
+    style={{moveStyle}}
+    catchLongTap="startDrag"
+    catchTouchMove="dragging"
+    catchTouchEnd="endDrag"
+  >
+    <slot />
+  </view>
+</view>
