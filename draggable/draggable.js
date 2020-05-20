@@ -5,6 +5,7 @@ Component({
     y: 0,
     stayStyle: { opacity: 1 },
     moveStyle: { opacity: 1 },
+    showMove: true
   },
   props: {},
   didMount() {
@@ -13,6 +14,7 @@ Component({
         ...this.props.styleObj,
         width: this.props.width,
         height: this.props.height,
+        showMove : this.props.showMove === false ? false : true
       }
     })
   },
@@ -24,7 +26,7 @@ Component({
       this.data.y = e.detail.pageY;
       let start = {
         ...this.data.moveStyle,
-        opacity: 0.3,
+        opacity: this.data.showMove ? 0.3 : 0,
         zIndex: 999999,
         transform: 'translate(10px, 10px)'
       };
@@ -43,6 +45,8 @@ Component({
         transform: `translate(${dx}px, ${dy}px)`
       };
       this.setData({ moveStyle: move });
+      if (this.props.moveDrag && this.props.startDrag.mymoveDrag)
+      this.props.moveDrag.mymoveDrag({ ...e.changedTouches[0], eventName: 'moveDrag' });
     },
     endDrag(e) {
       let end = {
