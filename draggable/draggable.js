@@ -15,7 +15,8 @@ Component({
         width: this.props.width,
         height: this.props.height,
       },
-      moveOpacity : this.props.showMove == "false" ? 0 : 0.3
+      moveOpacity: this.props.showMove == "false"
+        || this.props.showMove == false ? 0 : 0.3
     })
   },
   didUpdate() { },
@@ -32,8 +33,8 @@ Component({
       };
       this.setData({ moveStyle: start });
       if (this.props.startDrag && this.props.startDrag.mystartDrag)
-        this.props.startDrag.mystartDrag({ 
-          ...e.detail, 
+        this.props.startDrag.mystartDrag({
+          ...e.detail,
           eventName: 'startDrag',
           tagObj: this.props.tagObj
         });
@@ -50,11 +51,11 @@ Component({
       };
       this.setData({ moveStyle: move });
       if (this.props.moveDrag && this.props.startDrag.mymoveDrag)
-      this.props.moveDrag.mymoveDrag({ 
-        ...e.changedTouches[0], 
-        eventName: 'moveDrag',
-        tagObj: this.props.tagObj 
-      });
+        this.props.moveDrag.mymoveDrag({
+          ...e.changedTouches[0],
+          eventName: 'moveDrag',
+          tagObj: this.props.tagObj
+        });
     },
     endDrag(e) {
       let end = {
@@ -67,10 +68,10 @@ Component({
       };
       this.setData({ moveStyle: end });
       if (this.props.endDrag && this.props.endDrag.myendDrag)
-        this.props.endDrag.myendDrag({ 
-          ...e.changedTouches[0], 
+        this.props.endDrag.myendDrag({
+          ...e.changedTouches[0],
           eventName: 'endDrag',
-          tagObj: this.props.tagObj 
+          tagObj: this.props.tagObj
         });
     }
   },
